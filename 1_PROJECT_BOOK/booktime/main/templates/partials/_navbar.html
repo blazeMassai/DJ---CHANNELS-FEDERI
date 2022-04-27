@@ -1,0 +1,22 @@
+  {% load static %}
+
+          <header>
+
+            <h1 class="logo"><a href="{% url 'home' %}">BookTime</a></h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+              <ul>
+
+                <li class="nav-item active">
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item {% if request.path == '/about-us/' %}active{% endif %}">
+                    <a href="{% url 'about-us' %}">About Us</a>
+                </li>
+
+              </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+              <span></span>
+            </label>
+          </header>
