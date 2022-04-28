@@ -242,6 +242,47 @@ article .cont-wrapper {
     background: var(--background);
   }
 
+  .btn-custom{
+    background: var(--background) !important;
+    color: #fff !important;
+  }
+
   nav li .active {
     background: #fff !important;
   }
+
+  /*woble button css*/
+  /* Pulse */
+@-webkit-keyframes btn-custom {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes btn-custom {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active {
+  -webkit-animation-name: btn-custom;
+  animation-name: btn-custom;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+  /* end woble button css*/

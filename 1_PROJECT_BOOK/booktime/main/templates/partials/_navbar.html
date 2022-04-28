@@ -14,6 +14,10 @@
                     <a href="{% url 'about-us' %}">About Us</a>
                 </li>
 
+                <li class="nav-item {% if request.path == '/contact-us/' %}active{% endif %}">
+                    <a href="{% url 'contact-us' %}">Contact Us</a>
+                </li>
+
               </ul>
             </nav>
             <label for="nav-toggle" class="nav-toggle-label">
