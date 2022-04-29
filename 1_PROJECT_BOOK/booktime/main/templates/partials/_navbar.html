@@ -7,15 +7,15 @@
             <nav>
               <ul>
 
-                <li class="nav-item active">
-                    <a href="{% url 'home' %}">Home</a>
+                <li>
+                    <a {% if '/' == request.path %} class="active" {% endif %} href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item {% if request.path == '/about-us/' %}active{% endif %}">
-                    <a href="{% url 'about-us' %}">About Us</a>
+                <li>
+                    <a {% if 'about-us' in request.path %} class=" active"  {% endif %} href="{% url 'about-us' %}">About Us</a>
                 </li>
 
-                <li class="nav-item {% if request.path == '/contact-us/' %}active{% endif %}">
-                    <a href="{% url 'contact-us' %}">Contact Us</a>
+                <li>
+                    <a {% if 'contact-us' in request.path %} class="active" {% endif %} href="{% url 'contact-us' %}">Contact Us</a>
                 </li>
 
               </ul>
