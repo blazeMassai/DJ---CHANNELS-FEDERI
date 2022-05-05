@@ -18,6 +18,14 @@
                     <a {% if 'contact-us' in request.path %} class="active" {% endif %} href="{% url 'contact-us' %}">Contact Us</a>
                 </li>
 
+                <li>
+                    <a {% if 'login' in request.path %} class="active" {% endif %} href="{% url 'login' %}">Login</a>
+                </li>
+
+                <li>
+                    <a {% if 'signup' in request.path %} class="active" {% endif %} href="{% url 'signup' %}">Sign Up</a>
+                </li>
+
               </ul>
             </nav>
             <label for="nav-toggle" class="nav-toggle-label">
