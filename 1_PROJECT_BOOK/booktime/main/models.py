@@ -47,6 +47,9 @@ class CustomUser(AbstractUser):
 
     objects = UserManager()
 
+    def __str__(self):
+        return self.email
+
 UserModel = get_user_model()
 
 class ActiveManager(models.Manager):

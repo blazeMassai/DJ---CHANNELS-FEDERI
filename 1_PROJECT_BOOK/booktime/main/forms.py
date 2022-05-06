@@ -18,9 +18,10 @@ logger = logging.getLogger(__name__)
 
 
 class CustomUserCreationForm(CreateUserForm):
-    model = UserModel
-    fields = ('email')
-    field_classes = {"email": UsernameField}
+    class Meta(CreateUserForm.Meta):
+        model = models.UserModel
+        fields = ("email",)
+        field_classes = {"email": UsernameField}
 
     def send_mail(self):
         logger.info(

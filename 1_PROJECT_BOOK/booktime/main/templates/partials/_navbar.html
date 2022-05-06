@@ -18,6 +18,17 @@
                     <a {% if 'contact-us' in request.path %} class="active" {% endif %} href="{% url 'contact-us' %}">Contact Us</a>
                 </li>
 
+              {% if user.is_authenticated %}
+                 <li>
+                    <a {% if 'logout' in request.path %} class="active" {% endif %} href="{% url 'logout' %}">log Out</a>
+                </li>
+
+                  <li>
+                    <h5><span class="badge badge-primary active">Welcome, {{ user.first_name }}</span></h5>
+                  </li>
+
+                  {% else %}
+
                 <li>
                     <a {% if 'login' in request.path %} class="active" {% endif %} href="{% url 'login' %}">Login</a>
                 </li>
@@ -25,6 +36,8 @@
                 <li>
                     <a {% if 'signup' in request.path %} class="active" {% endif %} href="{% url 'signup' %}">Sign Up</a>
                 </li>
+
+              {% endif %}
 
               </ul>
             </nav>
