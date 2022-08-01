@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block title %} Billing{% endblock %}
+
+{% block content %}
+   <article>
+       <div class="p-4 my-glass col-6">
+                <h2>Select the billing/shipping addresses</h2>
+                  <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-custom" href="{% url "address_create" %}">Add a new one</a>
+                  </form>
+       </div>
+   </article>
+{% endblock content %}
