@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "assets": {
+    "imageswitcher.bundle.js": {
+      "name": "imageswitcher.bundle.js",
+      "path": "D:\\django_projects\\2022-PROJECTS\\5-django-channels-federico\\DJ---CHANNELS-FEDERI\\1_PROJECT_BOOK\\booktime\\main\\static\\bundles\\imageswitcher.bundle.js"
+    }
+  },
+  "chunks": {
+    "imageswitcher": [
+      "imageswitcher.bundle.js"
+    ]
+  }
+}

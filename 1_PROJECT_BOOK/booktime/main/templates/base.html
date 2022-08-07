@@ -24,18 +24,18 @@
              {% endfor %}
 
              {% if request.basket %}
-                <div>
+                <span class='badge bg-success m-3 p-2'>
                 {{ request.basket.count }}
                     items in basket
-                </div>
+                </span>
              {% endif %}
 
             {% block content %}
             {% endblock content %}
 
-            <script type="javascript" src="{% static "js/jquery-3.6.0.min.js" %}"></script>
-            <script type="javascript" src="{% static "js/popper.min.js" %}"></script>
-            <script type="javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+            <script type="javascript" src='{% static "js/jquery-3.6.0.min.js" %}''></script>
+            <script type="javascript" src='{% static "js/popper.min.js" %}'></script>
+            <script type="javascript" src='{% static "js/bootstrap.min.js" %}'></script>
 
             {% block js %}
             {% endblock js %}
